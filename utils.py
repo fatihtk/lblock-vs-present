@@ -128,7 +128,6 @@ def measure_performance(operation_name, algorithm_name, data_bytes, key_bytes, c
             "Anahtar Boyutu": f"{key_size_bytes * 8} bits ({key_size_bytes} bytes)",
             "Süre (sn)": f"{duration:.6f}", # Daha hassas süre
             "Bellek Farkı": format_bytes(memory_used), # Adını değiştirdik
-            # Ham değerleri de saklamak isteyebilirsiniz
             "_Veri Boyutu (bytes)": len(data_bytes),
             "_Süre (sn)": duration,
             "_Bellek Farkı (bytes)": memory_used,
@@ -155,9 +154,7 @@ def display_performance_table(results):
     if not valid_results:
         print("\nGörüntülenecek geçerli performans ölçümü sonucu yok.")
         return
-
-    # Başlıkları al (ilk geçerli sonuçtan)
-    # Ham değerleri (_ ile başlayanları) göstermeyelim
+    
     headers = [h for h in valid_results[0].keys() if not h.startswith('_')]
 
     # Sütun genişliklerini belirle
