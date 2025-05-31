@@ -2,8 +2,6 @@ from utils import bytes_to_int, int_to_bytes
 
 
 # --- PRESENT Sabitleri ve Fonksiyonları ---
-# DİKKAT: Bu S-Box ve P-Layer değerlerinin PRESENT standardına uygun olduğu varsayılmıştır.
-# Gerçek uygulamalar için resmi PRESENT spesifikasyonundan doğrulanmalıdır.
 SBOX_PRESENT = [0xC, 0x5, 0x6, 0xB, 0x9, 0x0, 0xA, 0xD, 0x3, 0xE, 0xF, 0x8, 0x4, 0x7, 0x1, 0x2]
 
 P_LAYER_PRESENT = [
